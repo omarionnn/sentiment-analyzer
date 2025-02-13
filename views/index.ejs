@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analyzer</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analyzer</h1>
+        <div class="analyzer-container">
+            <textarea id="textInput" placeholder="Enter text to analyze..." maxlength="500"></textarea>
+            <div class="char-counter">Characters remaining: <span id="charCount">500</span></div>
+            <button id="analyzeBtn">
+                <span class="btn-text">Analyze</span>
+                <div class="loader"></div>
+            </button>
+        </div>
+        <div id="results" class="results-container">
+            <div class="score-container">
+                <h2>Sentiment Distribution</h2>
+                <div class="sentiment-meter">
+                    <canvas id="sentimentGauge"></canvas>
+                </div>
+                <div id="sentimentScore" class="sentiment-score"></div>
+                <div id="sentimentComparative" class="comparative-score"></div>
+            </div>
+            <div class="chart-container">
+                <h3>Word Analysis</h3>
+                <canvas id="wordChart"></canvas>
+            </div>
+            <div class="words-container">
+                <div class="positive-words">
+                    <h3>Positive Words</h3>
+                    <div id="positiveWords"></div>
+                </div>
+                <div class="negative-words">
+                    <h3>Negative Words</h3>
+                    <div id="negativeWords"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/main.js" defer></script>
+</body>
+</html> 
